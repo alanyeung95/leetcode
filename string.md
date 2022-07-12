@@ -1,3 +1,34 @@
+## palindromic-substrings
+```
+Example 1:
+
+Input: s = "abc"
+Output: 3
+Explanation: Three palindromic strings: "a", "b", "c".
+Example 2:
+
+Input: s = "aaa"
+Output: 6
+Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
+```
+### ans
+```
+class Solution:
+    def countSubstrings(self, s):
+        N = len(s)
+        result = 0
+        
+        for i in range(2*N-1):
+            left = i//2
+            right = (i+1)//2
+            while left >= 0 and right < N and s[left] == s[right]:
+                result += 1
+                left -= 1
+                right += 1
+        
+        return result
+```
+
 ## reverse-string
 ### ans
 ```
