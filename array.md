@@ -1,3 +1,9 @@
+## subarray-sum-equals-k
+### ans
+https://leetcode.com/problems/subarray-sum-equals-k/discuss/341399/Python-clear-explanation-with-code-and-example
+https://leetcode.com/problems/subarray-sum-equals-k/discuss/1532102/JAVA-oror-Picture-%2B-Detail-Explanation-oror-2-methods-oror-prefix-sum-%2B-HashMap-oror-Easy-Solution
+https://leetcode.com/problems/subarray-sum-equals-k/discuss/1759711/Python-Simple-Python-Solution-Using-PrefixSum-and-Dictionary
+
 ## increasing-triplet-subsequence
 ```
 Example 1:
