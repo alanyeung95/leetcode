@@ -87,6 +87,8 @@ public:
         if amount == 0:
             return 0
         
+        coins.sort()
+                
         dp = [float('inf')] * (amount +1)
         dp[0] = 0
         
@@ -96,7 +98,9 @@ public:
             
         for i in range(1, len(dp)):
             for j in range(len(coins)):
-                if i-coins[j] >= 0 and dp[i-coins[j]] != -1:
+                if i-coins[j] < 0:
+                    break
+                if dp[i-coins[j]] != float('inf'):
                     dp[i] = min(dp[i-coins[j]]+1, dp[i])
 
         if dp[-1] == float('inf'):
