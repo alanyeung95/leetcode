@@ -1,3 +1,13 @@
+## sort with key
+```
+letters.sort(key = (lambda x: (x.split()[1:], x.split()[0])))
+# before:
+# ["let1 art can", "let2 own kit dig","let3 art zero", "let3 art zero can"]
+
+# after:
+# ["let1 art can","let3 art zero", "let3 art zero can", "let2 own kit dig"]
+```
+
 ## quick-sort
 ```
 def partition(l, r, nums):
