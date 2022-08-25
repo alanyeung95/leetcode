@@ -1,3 +1,46 @@
+## minimum-cost-to-connect-sticks
+```
+You have some sticks with positive integer lengths.
+
+You can connect any two sticks of lengths X and Y into one stick by paying a cost of X + Y.  You perform this action until there is one stick remaining.
+
+Return the minimum cost of connecting all the given sticks into one stick in this way.
+
+Example 1:
+
+Input: sticks = [2,4,3]
+Output: 14
+Example 2:
+
+Input: sticks = [1,8,3,5]
+Output: 30
+```
+### ans
+```
+def minCost(arr):
+    # Create a priority queue out of the
+    # given list
+    heapq.heapify(arr)
+ 
+    # Initialize result
+    res = 0
+ 
+    # While size of priority queue
+    # is more than 1
+    while(len(arr) > 1):
+ 
+        # Extract shortest two ropes from arr
+        first = heapq.heappop(arr)
+        second = heapq.heappop(arr)
+ 
+        # Connect the ropes: update result
+        # and insert the new rope to arr
+        res += first + second
+        heapq.heappush(arr, first + second)
+ 
+    return res
+```
+
 ## meeting-rooms
 ```
 Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
