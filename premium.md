@@ -1,3 +1,8 @@
+## design-search-autocomplete-system
+
+### ans
+https://aaronice.gitbook.io/lintcode/data_structure/design-search-autocomplete-system
+
 ## minimum-cost-to-connect-sticks
 ```
 You have some sticks with positive integer lengths.
