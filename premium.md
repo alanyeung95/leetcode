@@ -1,3 +1,7 @@
+## path-with-maximum-minimum-value
+### ans
+https://www.junhaow.com/lc/problems/heap/1102_path-with-maximum-minimum-value.html
+
 ## design-tic-tac-toe
 ### ans
 https://aaronice.gitbook.io/lintcode/data_structure/design-tic-tac-toe
