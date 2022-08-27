@@ -1,3 +1,7 @@
+## design-tic-tac-toe
+### ans
+https://aaronice.gitbook.io/lintcode/data_structure/design-tic-tac-toe
+
 ## design-search-autocomplete-system
 
 ### ans
