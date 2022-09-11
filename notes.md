@@ -1,13 +1,32 @@
-## python-syntax
+## python syntax
 ### counter
 ```
 c = Counter(['eggs', 'ham'])
 ```
 
-### conditional-expression
+### conditional expression
 ```
 sign = [1,-1][x < 0]
 # or sign = 1 if x > 0 else -1
+```
+
+### sort with different key
+```
+intervals.sort(key = lambda x: (x[0], -x[1]))
+```
+
+### heap and deque
+```
+from collections import deque
+numbers = deque([1, 2, 3, 4])
+numbers.popleft()
+numbers.appendleft(2)
+```
+```
+import heapq
+queue = []
+heappush(queue, val)
+heappop(queue)      
 ```
 
 ## binary-search
