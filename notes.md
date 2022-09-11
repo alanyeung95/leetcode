@@ -1,6 +1,13 @@
-## counter
+## python-syntax
+### counter
 ```
 c = Counter(['eggs', 'ham'])
+```
+
+### conditional-expression
+```
+sign = [1,-1][x < 0]
+# or sign = 1 if x > 0 else -1
 ```
 
 ## binary-search
