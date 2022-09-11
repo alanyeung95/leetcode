@@ -1,3 +1,32 @@
+## graph-valid-tree
+### ans
+ref: https://algomonster.medium.com/leetcode-261-graph-valid-tree-f27c212c1db1
+```
+    def validTree(self, n: int, edges: List[List[int]]) -> bool:
+        from collections import defaultdict
+        graph = defaultdict(list)
+        
+        # build the graph
+        for src, dest in edges:
+            graph[src].append(dest)
+            graph[dest].append(src)
+            
+        visited = set()
+        def dfs(root, parent): # returns true if graph has no cycle
+            visited.add(root)
+            for node in graph[root]:
+                if node == parent: # trivial cycle, skip
+                    continue
+                if node in visited:
+                    return False
+            
+                if not dfs(node, root):
+                    return False
+            return True
+        
+        return dfs(0, -1) and len(visited) == n
+```
+
 ## boundary-of-binary-tree
 ### ans
 https://www.geeksforgeeks.org/boundary-traversal-of-binary-tree/#:~:text=The%20left%20boundary%20is%20defined,left%20boundary%20or%20right%20boundary.
