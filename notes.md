@@ -94,3 +94,18 @@ def postorderTraversal(self, root):
             stack.append(node.right)
     return res[::-1]
 ```
+
+## reverse-linked-list
+```
+def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    prev = None
+    current = head
+
+    while current:
+        next = current.next
+        current.next = prev
+        prev = current
+        current = next
+
+    return prev
+```
