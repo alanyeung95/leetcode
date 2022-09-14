@@ -102,3 +102,16 @@ def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
     return prev
 ```
+
+## sliding-window
+```
+def lengthOfLongestSubstring(self, s: str) -> int:
+    seen = set(), res = 0, tailPtr = 0
+    for c in s:
+        while c in seen:
+            seen.remove(s[tailPtr])
+            tailPtr += 1            
+        seen.add(c)
+        res = max(res, len(seen))   
+    return res
+```
