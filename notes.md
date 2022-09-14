@@ -1,19 +1,12 @@
 ## python syntax
-### counter
-```
-c = Counter(['eggs', 'ham'])
-```
 
-### conditional expression
-```
-sign = [1,-1][x < 0]
-# or sign = 1 if x > 0 else -1
-```
+| counter |conditional expression | sort with different key
+| ------------- | ------------- |  ------------- |
+| ```c = Counter(['eggs', 'ham'])``` | ```sign = [1,-1][x < 0]```  or <br> ```sign = 1 if x > 0 else -1```  | ```intervals.sort(key = lambda x: (x[0], -x[1]))```
 
-### sort with different key
-```
-intervals.sort(key = lambda x: (x[0], -x[1]))
-```
+| check is number  |  remove space |  Header |
+| ------------- | ------------- |------------- |
+| ```if c.isnumeric()```  |  ```newS = s.strip()``` ||
 
 ### heap and deque
 ```
