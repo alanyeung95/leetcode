@@ -2,7 +2,7 @@
 
 | counter |conditional expression | sort with different key
 | ------------- | ------------- |  ------------- |
-| ```c = Counter(['eggs', 'ham'])``` | ```sign = [1,-1][x < 0]```  or <br> ```sign = 1 if x > 0 else -1```  | ```intervals.sort(key = lambda x: (x[0], -x[1]))```
+| ```c = Counter(['eggs', 'ham'])``` <br> ```c['eggs'] -= 1```<br> ```total = sum(c.values())``` | ```sign = [1,-1][x < 0]```  or <br> ```sign = 1 if x > 0 else -1```  | ```intervals.sort(key = lambda x: (x[0], -x[1]))```
 
 | check is number  |  remove space |  Header |
 | ------------- | ------------- |------------- |
