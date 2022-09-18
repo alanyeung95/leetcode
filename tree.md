@@ -80,6 +80,30 @@ def deepestLeavesSum(self, root):
     return sum(node.val for node in pre)
 ```
 
+## binary-tree-level-order-traversal
+### ans
+```
+def levelOrder(self, root):
+    ret = []
+    
+    level = [root]
+    
+    while root and level:
+        currentNodes = []
+        nextLevel = []
+        for node in level:
+            currentNodes.append(node.val)
+            if node.left:
+                nextLevel.append(node.left)
+            if node.right:
+                nextLevel.append(node.right)
+        ret.append(currentNodes)
+        level = nextLevel
+        
+        
+    return ret
+```
+
 ## binary-tree-inorder-traversal
 visit left node, then parent node, finally right node
 ### ans
