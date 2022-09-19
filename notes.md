@@ -8,18 +8,26 @@
 | ------------- | ------------- |------------- | ------------- |
 | ```if c.isnumeric()```  |  ```newS = s.strip()``` | ```>>> chr(97) -> 'a'``` <br>``` >>> ord('a') -> 97```| ```print("%.2f" % a)``` |
 
-### heap and deque
+| heap |  deque | |  |
+| ------------- | ------------- |------------- | ------------- |
+``` from collections import deque``` <br> ```numbers = deque([1, 2, 3, 4])``` <br> ```numbers.popleft()``` <br> ```numbers.appendleft(2)``` |  ```import heapq``` <br> ```queue = []``` <br> ```heappush(queue, val)``` <br> ```heappop(queue)``` | | |
+
+## topological-sort
 ```
-from collections import deque
-numbers = deque([1, 2, 3, 4])
-numbers.popleft()
-numbers.appendleft(2)
-```
-```
-import heapq
-queue = []
-heappush(queue, val)
-heappop(queue)      
+def canFinishBFS(self, n, prerequisites):
+    G = [[] for i in range(n)]
+    inDegree = [0] * n
+    for i, j in prerequisites:
+        # [1, 0] means 1 depends on 0, so 1 -> 0
+        G[i].append(j)
+        inDegree[j] += 1
+    bfs = [i for i in range(n) if inDegree[i] == 0]
+    for i in bfs:
+        for j in G[i]:
+            inDegree[j] -= 1
+            if inDegree[j] == 0:
+                bfs.append(j)
+    return len(bfs) == n
 ```
 
 ## binary-search
