@@ -8,9 +8,12 @@
 | ------------- | ------------- |------------- | ------------- |
 | ```if c.isnumeric()```  |  ```newS = s.strip()``` | ```>>> chr(97) -> 'a'``` <br>``` >>> ord('a') -> 97```| ```print("%.2f" % a)``` |
 
-| heap |  deque | |  |
+| heap |  deque | Node class|  |
 | ------------- | ------------- |------------- | ------------- |
-``` from collections import deque``` <br> ```numbers = deque([1, 2, 3, 4])``` <br> ```numbers.popleft()``` <br> ```numbers.appendleft(2)``` |  ```import heapq``` <br> ```queue = []``` <br> ```heappush(queue, val)``` <br> ```heappop(queue)``` | | |
+``` from collections import deque``` <br> ```numbers = deque([1, 2, 3, 4])``` <br> ```numbers.popleft()``` <br> ```numbers.appendleft(2)``` |  ```import heapq``` <br> ```queue = []``` <br> ```heappush(queue, val)``` <br> ```heappop(queue)``` | ```class Node:```<br>```def __init__(self, val = 0, next = None):```<br>```self.val = val```<br>```self.next = next```<br><br>```a = Node(1)```
+ | |
+
+
 
 ## topological-sort
 ```
