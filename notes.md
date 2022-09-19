@@ -4,9 +4,9 @@
 | ------------- | ------------- |  ------------- |
 | ```c = Counter(['eggs', 'ham'])``` <br> ```c['eggs'] -= 1```<br> ```total = sum(c.values())``` | ```sign = [1,-1][x < 0]```  or <br> ```sign = 1 if x > 0 else -1```  | ```intervals.sort(key = lambda x: (x[0], -x[1]))```
 
-| check is number  |  remove space |  int-char conversaion |
-| ------------- | ------------- |------------- |
-| ```if c.isnumeric()```  |  ```newS = s.strip()``` | ```>>> chr(97) -> 'a'``` <br>``` >>> ord('a') -> 97```|
+| check is number  |  remove space |  int-char conversaion | limit decimal |
+| ------------- | ------------- |------------- | ------------- |
+| ```if c.isnumeric()```  |  ```newS = s.strip()``` | ```>>> chr(97) -> 'a'``` <br>``` >>> ord('a') -> 97```| ```print("%.2f" % a)``` |
 
 ### heap and deque
 ```
