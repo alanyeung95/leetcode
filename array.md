@@ -92,6 +92,19 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 
 ### ans
 ```
+    # 20230728
+    def maxProfit(self, prices):
+        profit = 0
+        buy = prices[0]
+        for sell in prices[1:]:
+            if sell > buy:
+                profit = max(profit, sell - buy)
+            else:
+                buy = sell
+        
+        return profit
+```
+```
     public int maxProfit(int[] prices) {
         int maxCur = 0, maxSoFar = 0;
         for(int i = 1; i < prices.length; i++) {
