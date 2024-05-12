@@ -19,3 +19,22 @@ public int minSubArrayLen(int s, int[] a) {
   return min == Integer.MAX_VALUE ? 0 : min;
 }
 ```
+
+## longest-substring-without-repeating-characters
+### ans
+```
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        seen = set()
+        res = 0
+        tailPtr = 0
+        
+        for c in s:
+            while c in seen:
+                seen.remove(s[tailPtr])
+                tailPtr += 1            
+
+            seen.add(c)
+            res = max(res, len(seen))   
+            
+        return res
+```
