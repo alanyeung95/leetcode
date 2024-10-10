@@ -1,3 +1,7 @@
+## the-maze
+### ans
+ref: https://leetcode.ca/2017-04-03-490-The-Maze/
+
 ## encode-and-decode-strings
 ### ans
 ref: https://github.com/Eric-programming/CodeSolution/blob/master/src/Array/EncodeAndDecodeStrings/EncodeAndDecodeStrings.java
